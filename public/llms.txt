@@ -1,0 +1,33 @@
+# MBMR Auto — AI Agent Context & Knowledge Base
+
+> MBMR Auto is a premier auto parts distributor and retailer located in North York, serving the Greater Toronto Area (GTA), Ontario, Canada. Specializing in quality replacement auto parts for all makes and models with counter pickup and GTA delivery.
+
+## Business Information
+- **Business Name**: MBMR Auto
+- **Address**: 1275 Finch Ave W, North York, ON M3J 0L5, Canada
+- **Phone**: +1 (437) 961-4224
+- **Email**: Mbmrauto@gmail.com
+- **Website**: https://www.mbmrauto.com / https://mbmrauto.ca
+- **Hours of Operation**:
+  - Monday to Friday: 8:00 AM – 6:30 PM (EST)
+  - Saturday: 8:00 AM – 3:30 PM (EST)
+  - Sunday: Closed
+- **Service Area**: Greater Toronto Area (GTA) including North York, Toronto, Vaughan, Markham, Mississauga, Brampton, Richmond Hill, Scarborough.
+
+## Product Categories & Specialties
+1. **Alternators & Starters (Specialty)**: High-output alternators, starter motors, LIN-bus voltage regulators, decoupler pulleys, heavy-duty 24V commercial starters.
+2. **Brakes & Friction**: Ceramic and semi-metallic brake pads, rust-inhibiting coated rotors, brake calipers, master cylinders, brake hoses, and ABS sensors.
+3. **Suspension & Steering**: Complete quick-strut assemblies, shock absorbers, control arms with pre-pressed ball joints, tie rod ends, sway bar links, and steering racks.
+4. **Air Conditioning & Climate**: Brand-new AC compressors, condensers, evaporators, expansion valves, and heater blower motors.
+5. **Wholesale Tires**: All-season, winter, all-weather, and commercial light truck tires for repair shops and passenger vehicles.
+6. **Commercial & Heavy Truck Parts**: 24V electrical components, air brake chambers, heavy-duty drums, leaf springs, and fleet maintenance parts.
+7. **Body & Collision Parts**: OEM-fitment bumper covers, fenders, hoods, grilles, quarter panels, side mirrors, and crash support bars.
+8. **Engines & Powertrain**: Tested replacement engines, cylinder heads, timing chain kits, water pumps, oil pumps, and CV axles.
+9. **Automotive Lighting**: DOT/SAE compliant LED headlights, HID ballast kits, tail lamps, fog lights, and turn signals.
+
+## Customer Actions & URLs
+- **Homepage**: https://www.mbmrauto.com/
+- **Browse Parts Catalog**: https://www.mbmrauto.com/parts
+- **Request a Quote / Contact**: https://www.mbmrauto.com/contact
+- **Direct Phone Order**: tel:+14379614224
+- **WhatsApp Quote Support**: https://wa.me/14379614224?text=Hi%20MBMR%20Auto%2C%20I%20am%20looking%20for%20a%20part
