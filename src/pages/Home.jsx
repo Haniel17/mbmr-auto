@@ -54,6 +54,15 @@ export default function Home() {
       partsList: ["High-Output Alternators", "Planetary Starter Motors", "LIN-Bus Smart Regulators", "Start-Stop Solenoids", "Overrunning Pulleys (OAP)"]
     },
     {
+      id: "body-parts",
+      title: "Body & Collision Parts",
+      icon: <ShieldCheck size={22} />,
+      desc: "OEM-equivalent bumper covers, stamped steel fenders, hoods, grilles, quarter panels, and power-heated side view mirrors.",
+      image: "/images/parts-body.jpg",
+      badge: "Collision Quality",
+      partsList: ["Front & Rear Bumper Covers", "EDP Primer Steel Fenders", "Stamped Aluminum Hoods", "Front Mesh Grilles", "Power Heated Side Mirrors"]
+    },
+    {
       id: "brakes",
       title: "Brake Parts",
       icon: <Disc size={22} />,
@@ -97,15 +106,6 @@ export default function Home() {
       image: "/images/parts-truck.jpg",
       badge: "Heavy-Duty & Fleet",
       partsList: ["24V Brushless Alternators", "Diesel Gear-Reduction Starters", "Air Brake Chambers & Valves", "Cast Iron Brake Drums", "Heavy-Duty Leaf Springs"]
-    },
-    {
-      id: "body-parts",
-      title: "Car Body & Collision Parts",
-      icon: <ShieldCheck size={22} />,
-      desc: "OEM-equivalent bumper covers, stamped steel fenders, hoods, grilles, quarter panels, and power-heated side view mirrors.",
-      image: "/images/parts-body.jpg",
-      badge: "Collision Quality",
-      partsList: ["Front & Rear Bumper Covers", "EDP Primer Steel Fenders", "Stamped Aluminum Hoods", "Front Mesh Grilles", "Power Heated Side Mirrors"]
     },
     {
       id: "engines-powertrain",
@@ -422,7 +422,7 @@ export default function Home() {
               View All Parts Offered <ArrowRight size={17} style={{ marginLeft: 8 }} />
             </Link>
             <span style={{ fontSize: "0.825rem", color: "var(--text-muted)" }}>
-              Explore Alternators, Starters, Brakes, Suspension, Steering &amp; AC Parts
+              Explore Alternators, Starters, Body Parts, Brakes, Suspension &amp; AC Parts
             </span>
           </div>
         </div>
