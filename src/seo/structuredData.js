@@ -48,10 +48,56 @@ export function localBusinessSchema() {
       { "@type": "City", name: "Markham" },
       { "@type": "City", name: "Mississauga" },
       { "@type": "City", name: "Brampton" },
+      { "@type": "City", name: "Richmond Hill" },
+      { "@type": "City", name: "Scarborough" },
     ],
     currenciesAccepted: "CAD",
-    paymentAccepted: "Cash, Credit Card, Debit Card",
-    description: companyInfo.shortDesc,
+    paymentAccepted: "Cash, Credit Card, Debit Card, E-Transfer",
+    description:
+      "MBMR Auto is a premier supplier of car body parts, replacement bumpers, fenders, hoods, wholesale tyres, tires, alternators, starters, brake components, and suspension across North York and the Greater Toronto Area (GTA).",
+    knowsAbout: [
+      "Car Body Parts",
+      "Auto Body Panels",
+      "Collision Replacement Parts",
+      "Front and Rear Bumper Covers",
+      "Steel Fenders and Aluminum Hoods",
+      "Front Grilles and Quarter Panels",
+      "Power Heated Side Mirrors",
+      "Wholesale Tyres and Tires",
+      "Winter Tyres (3PMSF)",
+      "All-Season and Performance Tires",
+      "Commercial Cargo Van Tyres",
+      "Alternators and Starter Motors",
+      "Ceramic Brake Pads and Coated Rotors",
+      "Quick-Struts and Suspension",
+      "Air Conditioning Compressors"
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "MBMR Auto Parts & Tire Supply Catalog",
+      itemListElement: [
+        {
+          "@type": "OfferCatalog",
+          name: "Car Body & Collision Parts",
+          description: "Replacement bumpers, fenders, hoods, grilles, quarter panels, and side mirrors."
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Wholesale Tyres & Tires",
+          description: "Wholesale all-season, winter tyres, commercial van tyres, and performance tires."
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Alternators & Starters",
+          description: "High-output alternators, starter motors, and automotive electrical components."
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Brake Parts & Rotors",
+          description: "Ceramic brake pads, coated disc rotors, calipers, and hydraulic lines."
+        }
+      ]
+    }
   };
 }
 
@@ -89,10 +135,10 @@ export function contactPageSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    name: "Request a Parts Quote — MBMR Auto",
+    name: "Request a Parts Quote — Car Body Parts, Tyres & Alternators — MBMR Auto",
     url: absoluteUrl("/contact"),
     description:
-      "Contact MBMR Auto for auto parts quotes, stock checks, and pickup at 1275 Finch Ave W, North York.",
+      "Contact MBMR Auto for price quotes on car body parts, wholesale tyres, alternators, starters, and mechanical auto parts in North York & GTA.",
     mainEntity: localBusinessSchema(),
   };
 }

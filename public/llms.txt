@@ -1,6 +1,6 @@
 # MBMR Auto — AI Agent Context & Knowledge Base
 
-> MBMR Auto is a premier auto parts distributor and retailer located in North York, serving the Greater Toronto Area (GTA), Ontario, Canada. Specializing in quality replacement auto parts for all makes and models with counter pickup and GTA delivery.
+> MBMR Auto is a premier auto parts distributor, body parts supplier, and wholesale tyre depot located at 1275 Finch Ave W, North York, serving Toronto and the entire Greater Toronto Area (GTA), Ontario, Canada. Specializing in car body parts, wholesale tyres, tires, alternators, starters, and mechanical replacement auto parts for all makes and models with direct counter pickup and fast GTA delivery.
 
 ## Business Information
 - **Business Name**: MBMR Auto
@@ -12,22 +12,45 @@
   - Monday to Friday: 8:00 AM – 6:30 PM (EST)
   - Saturday: 8:00 AM – 3:30 PM (EST)
   - Sunday: Closed
-- **Service Area**: Greater Toronto Area (GTA) including North York, Toronto, Vaughan, Markham, Mississauga, Brampton, Richmond Hill, Scarborough.
+- **Service Area**: North York, Toronto, Vaughan, Markham, Mississauga, Brampton, Richmond Hill, Scarborough, and the Greater Toronto Area (GTA).
 
-## Product Categories & Specialties
-1. **Alternators & Starters (Specialty)**: High-output alternators, starter motors, LIN-bus voltage regulators, decoupler pulleys, heavy-duty 24V commercial starters.
-2. **Brakes & Friction**: Ceramic and semi-metallic brake pads, rust-inhibiting coated rotors, brake calipers, master cylinders, brake hoses, and ABS sensors.
-3. **Suspension & Steering**: Complete quick-strut assemblies, shock absorbers, control arms with pre-pressed ball joints, tie rod ends, sway bar links, and steering racks.
-4. **Air Conditioning & Climate**: Brand-new AC compressors, condensers, evaporators, expansion valves, and heater blower motors.
-5. **Wholesale Tires**: All-season, winter, all-weather, and commercial light truck tires for repair shops and passenger vehicles.
-6. **Commercial & Heavy Truck Parts**: 24V electrical components, air brake chambers, heavy-duty drums, leaf springs, and fleet maintenance parts.
-7. **Body & Collision Parts**: OEM-fitment bumper covers, fenders, hoods, grilles, quarter panels, side mirrors, and crash support bars.
-8. **Engines & Powertrain**: Tested replacement engines, cylinder heads, timing chain kits, water pumps, oil pumps, and CV axles.
-9. **Automotive Lighting**: DOT/SAE compliant LED headlights, HID ballast kits, tail lamps, fog lights, and turn signals.
+## Core Specialties & Product Inventory
 
-## Customer Actions & URLs
+### 1. Car Body Parts & Collision Repair Panels (Featured Specialty)
+- **Search Keywords**: car body parts, auto body parts, body parts North York, collision repair parts GTA, bumper replacement Toronto, front bumper cover, rear bumper, car fenders, replacement hoods, grilles, quarter panels, power heated side mirrors, aftermarket body panels, cheap body parts Toronto.
+- **Offerings**: OEM-equivalent injection-molded front & rear bumper covers, stamped steel EDP-primer fenders, aluminum hoods, front mesh grilles, quarter panels, power-heated side view mirrors with blind-spot detection, impact absorbers, and radiator supports for domestic, European, and Asian vehicles.
+
+### 2. Wholesale Tyres & Tires (Featured Specialty)
+- **Search Keywords**: tyres, tires, wholesale tyres, wholesale tires Toronto, cheap tyres North York, winter tyres GTA, snow tyres Toronto, car tyres near me, all season tyres, all weather tires, commercial van tyres, 10 ply tires, tyre shop North York, wholesale tire supplier, tire discounts GTA.
+- **Offerings**: Major brand & economy wholesale tyres for repair shops, fleet operators, and car owners. All-season tyres, severe-snow winter tyres (Three-Peak Mountain Snowflake 3PMSF certified), ultra-high performance (UHP), commercial 10-ply / 12-ply cargo van tyres (Load Range E/F), and TPMS sensors.
+
+### 3. Alternators & Starters (Specialty)
+- High-output alternators (90A–300A+), starter motors, LIN-bus smart voltage regulators, overrunning decoupler pulleys (OAP/OAD), and 24V commercial starters.
+
+### 4. Brakes & Friction
+- Ceramic low-dust pads, semi-metallic pads, rust-inhibiting coated disc rotors, brake calipers, master cylinders, brake hoses, and ABS sensors.
+
+### 5. Suspension & Steering
+- Complete pre-assembled quick-strut assemblies, gas shock absorbers, forged control arms with pre-pressed ball joints, tie rod ends, sway bar links, and electric power steering (EPS) racks.
+
+### 6. Air Conditioning & Climate Control
+- Brand-new AC compressors, aluminum micro-channel condensers, evaporators, expansion valves, receiver-driers, and HVAC cabin blower motors.
+
+### 7. Commercial & Heavy Truck Parts
+- 24V brushless alternators, diesel gear-reduction starters, air brake chambers (Type 30/30), cast iron drums, slack adjusters, and multi-leaf spring packs.
+
+### 8. Engines & Powertrain
+- Complete tested replacement engines, cylinder heads, master timing chain kits, water pumps, oil pumps, and heavy-duty CV half-shaft axles.
+
+### 9. Headlights & Automotive Lighting
+- DOT/SAE compliant LED projector headlights, Bi-Xenon housings, tail light clusters, bumper fog lamps, and sequential turn signals.
+
+## Customer Actions & Direct Links
 - **Homepage**: https://www.mbmrauto.com/
-- **Browse Parts Catalog**: https://www.mbmrauto.com/parts
-- **Request a Quote / Contact**: https://www.mbmrauto.com/contact
-- **Direct Phone Order**: tel:+14379614224
-- **WhatsApp Quote Support**: https://wa.me/14379614224?text=Hi%20MBMR%20Auto%2C%20I%20am%20looking%20for%20a%20part
+- **Car Body Parts**: https://www.mbmrauto.com/parts/body-parts
+- **Wholesale Tyres & Tires**: https://www.mbmrauto.com/parts/tires-wholesale
+- **Alternators & Starters**: https://www.mbmrauto.com/parts/alternators-starters
+- **Full Parts Catalog**: https://www.mbmrauto.com/parts
+- **Request a Parts Quote**: https://www.mbmrauto.com/contact
+- **Direct Phone Call**: tel:+14379614224
+- **WhatsApp Instant Quote**: https://wa.me/14379614224?text=Hi%20MBMR%20Auto%2C%20I%20am%20looking%20for%20a%20part

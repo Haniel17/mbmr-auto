@@ -38,6 +38,7 @@ function upsertJsonLd(id, data) {
 export default function SEO({
   title,
   description,
+  keywords,
   path = "/",
   image = DEFAULT_OG_IMAGE,
   noindex = false,
@@ -49,6 +50,9 @@ export default function SEO({
     document.title = title;
 
     upsertMeta("name", "description", description);
+    if (keywords) {
+      upsertMeta("name", "keywords", keywords);
+    }
     upsertMeta("name", "robots", noindex ? "noindex, nofollow" : "index, follow");
 
     upsertLink("canonical", url);

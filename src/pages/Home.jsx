@@ -155,6 +155,7 @@ export default function Home() {
       <SEO
         title={pageSeo.home.title}
         description={pageSeo.home.description}
+        keywords={pageSeo.home.keywords}
         path={pageSeo.home.path}
         jsonLd={localBusinessSchema()}
       />

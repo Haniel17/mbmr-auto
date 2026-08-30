@@ -163,6 +163,7 @@ export default function GeneralContact() {
       <SEO
         title={pageSeo.contact.title}
         description={pageSeo.contact.description}
+        keywords={pageSeo.contact.keywords}
         path={pageSeo.contact.path}
         jsonLd={contactPageSchema()}
       />

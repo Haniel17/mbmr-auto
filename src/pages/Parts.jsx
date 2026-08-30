@@ -66,6 +66,7 @@ export default function Parts() {
       return {
         title: categorySeo[activeCategory].title,
         description: categorySeo[activeCategory].description,
+        keywords: categorySeo[activeCategory].keywords,
         path: partsCategoryPath(activeCategory),
         jsonLd: breadcrumbSchema([
           { name: "Home", path: "/" },
@@ -78,6 +79,7 @@ export default function Parts() {
     return {
       title: pageSeo.parts.title,
       description: pageSeo.parts.description,
+      keywords: pageSeo.parts.keywords,
       path: pageSeo.parts.path,
       jsonLd: {
         "@context": "https://schema.org",
@@ -117,6 +119,7 @@ export default function Parts() {
       <SEO
         title={seoMeta.title}
         description={seoMeta.description}
+        keywords={seoMeta.keywords}
         path={seoMeta.path}
         jsonLd={seoMeta.jsonLd}
       />
