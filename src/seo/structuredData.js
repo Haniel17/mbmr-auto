@@ -54,28 +54,43 @@ export function localBusinessSchema() {
     currenciesAccepted: "CAD",
     paymentAccepted: "Cash, Credit Card, Debit Card, E-Transfer",
     description:
-      "MBMR Auto is a premier supplier of car body parts, replacement bumpers, fenders, hoods, wholesale tyres, tires, alternators, starters, brake components, and suspension across North York and the Greater Toronto Area (GTA).",
+      "MBMR Auto is a premier supplier of car parts, truck parts, commercial heavy-duty truck components, collision body parts, replacement bumpers, fenders, hoods, wholesale tyres, alternators, starters, brake components, and suspension across North York and the Greater Toronto Area (GTA).",
     knowsAbout: [
-      "Car Body Parts",
-      "Auto Body Panels",
-      "Collision Replacement Parts",
+      "Car Parts & Automotive Components",
+      "Truck Parts & Heavy-Duty Commercial Vehicle Parts",
+      "Pickup Truck Parts (Ford Super Duty, Chevy Silverado, Ram)",
+      "Commercial Fleet & Diesel Truck Parts (Freightliner, Hino, Isuzu, Volvo, Peterbilt)",
+      "Car Body Parts & Collision Repair Panels",
       "Front and Rear Bumper Covers",
       "Steel Fenders and Aluminum Hoods",
       "Front Grilles and Quarter Panels",
-      "Power Heated Side Mirrors",
-      "Wholesale Tyres and Tires",
-      "Winter Tyres (3PMSF)",
+      "Power Heated Side Mirrors & Truck Tow Mirrors",
+      "Wholesale Tyres & Tires (Passenger & Commercial)",
+      "Winter Tyres (3PMSF Severe Snow)",
       "All-Season and Performance Tires",
-      "Commercial Cargo Van Tyres",
-      "Alternators and Starter Motors",
-      "Ceramic Brake Pads and Coated Rotors",
-      "Quick-Struts and Suspension",
-      "Air Conditioning Compressors"
+      "Commercial 10-Ply & 12-Ply Cargo Van Tyres",
+      "Alternators and Starter Motors (12V & 24V Heavy Duty)",
+      "Diesel Starters & High-Amp Brushless Alternators",
+      "Ceramic Brake Pads, Heavy-Duty Truck Brakes & Coated Rotors",
+      "Truck Air Brake Chambers (Type 30/30) & Drums",
+      "Quick-Struts, Heavy-Duty Shock Absorbers & Leaf Springs",
+      "Air Conditioning Compressors & Truck HVAC",
+      "Tested Replacement Engines, Cylinder Heads & CV Axles"
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "MBMR Auto Parts & Tire Supply Catalog",
+      name: "MBMR Auto Car & Truck Parts Catalog",
       itemListElement: [
+        {
+          "@type": "OfferCatalog",
+          name: "Car & Truck Mechanical Parts",
+          description: "Full mechanical parts catalog for passenger cars, SUVs, and pickup trucks."
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Commercial & Heavy-Duty Truck Parts",
+          description: "24V alternators, diesel starters, air brake chambers, cast iron drums, and leaf springs."
+        },
         {
           "@type": "OfferCatalog",
           name: "Car Body & Collision Parts",
@@ -89,12 +104,12 @@ export function localBusinessSchema() {
         {
           "@type": "OfferCatalog",
           name: "Alternators & Starters",
-          description: "High-output alternators, starter motors, and automotive electrical components."
+          description: "High-output 12V and 24V alternators, starter motors, and automotive electrical components."
         },
         {
           "@type": "OfferCatalog",
           name: "Brake Parts & Rotors",
-          description: "Ceramic brake pads, coated disc rotors, calipers, and hydraulic lines."
+          description: "Ceramic brake pads, coated disc rotors, heavy-duty truck brakes, calipers, and hydraulic lines."
         }
       ]
     }

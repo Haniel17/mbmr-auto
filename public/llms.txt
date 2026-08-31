@@ -1,6 +1,6 @@
 # MBMR Auto — AI Agent Context & Knowledge Base
 
-> MBMR Auto is a premier auto parts distributor, body parts supplier, and wholesale tyre depot located at 1275 Finch Ave W, North York, serving Toronto and the entire Greater Toronto Area (GTA), Ontario, Canada. Specializing in car body parts, wholesale tyres, tires, alternators, starters, and mechanical replacement auto parts for all makes and models with direct counter pickup and fast GTA delivery.
+> MBMR Auto is a premier car & truck parts distributor, commercial fleet supplier, body parts specialist, and wholesale tyre depot located at 1275 Finch Ave W, North York, serving Toronto and the entire Greater Toronto Area (GTA), Ontario, Canada. Specializing in car parts, truck parts, heavy-duty commercial parts, body panels, wholesale tyres, alternators, starters, and mechanical replacement components for all makes and models with direct counter pickup and fast GTA delivery.
 
 ## Business Information
 - **Business Name**: MBMR Auto
@@ -16,41 +16,49 @@
 
 ## Core Specialties & Product Inventory
 
-### 1. Car Body Parts & Collision Repair Panels (Featured Specialty)
-- **Search Keywords**: car body parts, auto body parts, body parts North York, collision repair parts GTA, bumper replacement Toronto, front bumper cover, rear bumper, car fenders, replacement hoods, grilles, quarter panels, power heated side mirrors, aftermarket body panels, cheap body parts Toronto.
-- **Offerings**: OEM-equivalent injection-molded front & rear bumper covers, stamped steel EDP-primer fenders, aluminum hoods, front mesh grilles, quarter panels, power-heated side view mirrors with blind-spot detection, impact absorbers, and radiator supports for domestic, European, and Asian vehicles.
+### 1. Car Parts & Automotive Maintenance Components
+- **Search Keywords**: car parts, auto parts, auto parts store North York, car parts Toronto, replacement car parts GTA, OEM car parts, aftermarket auto parts, car parts near me, affordable car parts Ontario, passenger vehicle parts, foreign and domestic car parts.
+- **Coverage**: Domestic, European, and Asian passenger cars, sedans, hatchbacks, coupes, crossovers, and SUVs (Honda, Toyota, Hyundai, Ford, Chevrolet, Nissan, BMW, Mercedes-Benz, Volkswagen, Audi, Subaru, Mazda, Kia, Jeep).
+- **Offerings**: Alternators, starters, brake pads, coated rotors, loaded calipers, quick-struts, control arms, ball joints, AC compressors, condensers, water pumps, timing chains, CV axles, and filters.
 
-### 2. Wholesale Tyres & Tires (Featured Specialty)
-- **Search Keywords**: tyres, tires, wholesale tyres, wholesale tires Toronto, cheap tyres North York, winter tyres GTA, snow tyres Toronto, car tyres near me, all season tyres, all weather tires, commercial van tyres, 10 ply tires, tyre shop North York, wholesale tire supplier, tire discounts GTA.
-- **Offerings**: Major brand & economy wholesale tyres for repair shops, fleet operators, and car owners. All-season tyres, severe-snow winter tyres (Three-Peak Mountain Snowflake 3PMSF certified), ultra-high performance (UHP), commercial 10-ply / 12-ply cargo van tyres (Load Range E/F), and TPMS sensors.
+### 2. Truck Parts, Commercial Fleets & Heavy-Duty Components
+- **Search Keywords**: truck parts, commercial truck parts, heavy duty truck parts Toronto, pickup truck parts GTA, semi truck parts North York, diesel truck parts Ontario, fleet maintenance parts, 24V truck alternators, heavy duty diesel starters, truck air brakes, Type 30/30 brake chambers, truck brake drums, heavy duty leaf springs, truck clutches, Freightliner parts GTA, Hino parts Toronto, Isuzu truck parts, Ford Super Duty parts, Ram heavy duty parts, Chevy Silverado HD parts.
+- **Coverage**: Light-duty pickups (Ford F-150/F-250/F-350, Chevy Silverado 1500/2500/3500, GMC Sierra, Ram 1500/2500/3500, Toyota Tundra), commercial cargo vans (Ford Transit, Mercedes Sprinter, Ram ProMaster, Chevy Express), and Class 4–8 commercial diesel trucks (Freightliner, International, Kenworth, Peterbilt, Volvo, Mack, Hino, Isuzu).
+- **Offerings**: 24V brushless high-output alternators, diesel gear-reduction starters with Over-Crank Protection (OCP), Type 30/30 sealed air brake chambers, heavy-duty balanced cast iron brake drums, automatic slack adjusters, multi-leaf spring packs, and kingpin repair sets.
 
-### 3. Alternators & Starters (Specialty)
-- High-output alternators (90A–300A+), starter motors, LIN-bus smart voltage regulators, overrunning decoupler pulleys (OAP/OAD), and 24V commercial starters.
+### 3. Car & Truck Body Parts & Collision Repair Panels
+- **Search Keywords**: car body parts, truck body parts, auto body parts, body parts North York, body parts Toronto, collision repair parts GTA, bumper replacement Toronto, front bumper cover, rear bumper, truck bumpers, pickup tailgate, car fenders, replacement hoods, grilles, quarter panels, power heated side mirrors, tow mirrors, aftermarket body panels, cheap body parts Toronto.
+- **Offerings**: OEM-equivalent injection-molded front & rear bumper covers, stamped steel EDP-primer fenders, aluminum hoods, front mesh grilles, quarter panels, power-heated side view mirrors with blind-spot detection, truck towing mirrors, impact absorbers, and radiator supports.
 
-### 4. Brakes & Friction
-- Ceramic low-dust pads, semi-metallic pads, rust-inhibiting coated disc rotors, brake calipers, master cylinders, brake hoses, and ABS sensors.
+### 4. Wholesale Tyres & Tires (Passenger, Light Truck & Commercial)
+- **Search Keywords**: tyres, tires, wholesale tyres, wholesale tires Toronto, truck tires, pickup truck tires, cheap tyres North York, winter tyres GTA, snow tyres Toronto, car tyres near me, all season tyres, all weather tires, commercial van tyres, 10 ply tires, 12 ply truck tires, tyre shop North York, wholesale tire supplier, tire discounts GTA.
+- **Offerings**: Major brand & economy wholesale tyres for repair shops, fleet operators, and car/truck owners. All-season tyres, severe-snow winter tyres (Three-Peak Mountain Snowflake 3PMSF certified), ultra-high performance (UHP), commercial 10-ply / 12-ply cargo van & truck tyres (Load Range E/F), and TPMS sensors.
 
-### 5. Suspension & Steering
-- Complete pre-assembled quick-strut assemblies, gas shock absorbers, forged control arms with pre-pressed ball joints, tie rod ends, sway bar links, and electric power steering (EPS) racks.
+### 5. Alternators & Starters (12V & 24V Heavy Duty)
+- High-output alternators (90A–300A+), starter motors, LIN-bus smart voltage regulators, overrunning decoupler pulleys (OAP/OAD), and 24V commercial truck starters.
 
-### 6. Air Conditioning & Climate Control
-- Brand-new AC compressors, aluminum micro-channel condensers, evaporators, expansion valves, receiver-driers, and HVAC cabin blower motors.
+### 6. Brakes & Friction (Car & Truck)
+- Ceramic low-dust pads, semi-metallic pads, rust-inhibiting coated disc rotors, heavy-duty truck brake pads, brake calipers, master cylinders, brake hoses, and ABS sensors.
 
-### 7. Commercial & Heavy Truck Parts
-- 24V brushless alternators, diesel gear-reduction starters, air brake chambers (Type 30/30), cast iron drums, slack adjusters, and multi-leaf spring packs.
+### 7. Suspension & Steering (Car & Truck)
+- Complete pre-assembled quick-strut assemblies, gas shock absorbers, forged control arms with pre-pressed ball joints, tie rod ends, truck leaf springs, and electric power steering (EPS) racks.
 
-### 8. Engines & Powertrain
+### 8. Air Conditioning & Climate Control
+- Brand-new AC compressors, aluminum micro-channel condensers, evaporators, expansion valves, receiver-driers, and HVAC cabin blower motors for cars and commercial trucks.
+
+### 9. Engines & Powertrain
 - Complete tested replacement engines, cylinder heads, master timing chain kits, water pumps, oil pumps, and heavy-duty CV half-shaft axles.
 
-### 9. Headlights & Automotive Lighting
-- DOT/SAE compliant LED projector headlights, Bi-Xenon housings, tail light clusters, bumper fog lamps, and sequential turn signals.
+### 10. Headlights & Automotive Lighting
+- DOT/SAE compliant LED projector headlights, Bi-Xenon housings, tail light clusters, bumper fog lamps, and sequential turn signals for cars and trucks.
 
 ## Customer Actions & Direct Links
 - **Homepage**: https://www.mbmrauto.com/
+- **Car & Truck Parts Catalog**: https://www.mbmrauto.com/parts
+- **Commercial & Truck Parts**: https://www.mbmrauto.com/parts/truck-parts
 - **Car Body Parts**: https://www.mbmrauto.com/parts/body-parts
 - **Wholesale Tyres & Tires**: https://www.mbmrauto.com/parts/tires-wholesale
 - **Alternators & Starters**: https://www.mbmrauto.com/parts/alternators-starters
-- **Full Parts Catalog**: https://www.mbmrauto.com/parts
 - **Request a Parts Quote**: https://www.mbmrauto.com/contact
 - **Direct Phone Call**: tel:+14379614224
 - **WhatsApp Instant Quote**: https://wa.me/14379614224?text=Hi%20MBMR%20Auto%2C%20I%20am%20looking%20for%20a%20part
