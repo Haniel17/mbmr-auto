@@ -39,6 +39,9 @@ export default function Header() {
 
   return (
     <header className={`header ${scrolled ? "scrolled" : ""}`}>
+      {/* Top Utility Bar */}
+      <MemberSavingsBar />
+
       {/* Main Navbar */}
       <div className="header-navbar">
         <div className="container header-container">
@@ -74,9 +77,6 @@ export default function Header() {
           </button>
         </div>
       </div>
-
-      {/* Horizontally Moving Walk-In Announcement Bar */}
-      <MemberSavingsBar />
 
       {/* Mobile Navigation Drawer */}
       <div className={`mobile-nav-overlay ${isOpen ? "open" : ""}`} onClick={closeMenu}>

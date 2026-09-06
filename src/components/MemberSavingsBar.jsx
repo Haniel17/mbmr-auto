@@ -1,57 +1,37 @@
-import { Link } from "react-router-dom";
-import MBMRLogo from "./MBMRLogo";
+import { Phone, MapPin, Clock } from "lucide-react";
+import { companyInfo } from "../data/partsData";
 
 export default function MemberSavingsBar() {
-  const tickerItems = [
-    {
-      badge: "NORTH YORK DEPOT",
-      highlight: "WALK-IN CUSTOMERS ARE WELCOME",
-      sub: "Visit our parts counter at 1275 Finch Ave W, North York"
-    },
-    {
-      badge: "PARTS COUNTER OPEN",
-      highlight: "WALK-IN CUSTOMERS ARE WELCOME",
-      sub: "Instant over-the-counter auto parts for all makes & models"
-    },
-    {
-      badge: "PUBLIC & TRADE",
-      highlight: "WALK-IN CUSTOMERS ARE WELCOME",
-      sub: "No appointment needed — visit us Mon–Fri 8AM–6:30PM, Sat 8AM–3:30PM"
-    },
-    {
-      badge: "FAST COUNTER SERVICE",
-      highlight: "WALK-IN CUSTOMERS ARE WELCOME",
-      sub: "Expert in-person parts lookup, fair prices & instant pickup"
-    }
-  ];
-
   return (
-    <aside className="member-savings-bar" aria-label="Walk-in customers welcome announcement ticker">
-      <div className="member-marquee-track">
-        {[...Array(2)].map((_, groupIdx) => (
-          <div key={groupIdx} className="member-marquee-group" aria-hidden={groupIdx > 0}>
-            {tickerItems.map((item, idx) => (
-              <div key={idx} className="member-ticker-wrapper">
-                <Link to="/contact" className="member-ticker-item">
-                  <span className="member-ticker-badge">
-                    <span className="member-pulse-dot" />
-                    {item.badge}
-                  </span>
-                  <strong className="member-ticker-highlight">
-                    WALK-IN CUSTOMERS ARE <span className="ticker-welcome-red">WELCOME</span>
-                  </strong>
-                  <span className="member-ticker-dot">•</span>
-                  <span className="member-ticker-sub">{item.sub}</span>
-                </Link>
+    <aside className="top-utility-bar" aria-label="Depot hours and walk-in counter information">
+      <div className="container top-utility-container">
+        <div className="top-utility-left">
+          <span className="top-utility-tag">Walk-Ins Welcome</span>
+          <span className="top-utility-text">Public &amp; Trade Auto Parts Counter</span>
+        </div>
 
-                {/* Company Logo as Text Divider */}
-                <div className="member-ticker-logo-divider" title="MBMR Auto">
-                  <MBMRLogo height={20} />
-                </div>
-              </div>
-            ))}
+        <div className="top-utility-right">
+          <div className="top-utility-item">
+            <Clock size={13} className="top-utility-icon" />
+            <span>Mon–Fri 8AM–6:30PM &bull; Sat 8AM–3:30PM</span>
           </div>
-        ))}
+          <a 
+            href={companyInfo.mapDirectLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="top-utility-item top-utility-link"
+          >
+            <MapPin size={13} className="top-utility-icon" />
+            <span>1275 Finch Ave W, North York</span>
+          </a>
+          <a 
+            href={`tel:${companyInfo.phone}`}
+            className="top-utility-item top-utility-link top-utility-phone"
+          >
+            <Phone size={13} className="top-utility-icon" />
+            <span>{companyInfo.phone}</span>
+          </a>
+        </div>
       </div>
     </aside>
   );

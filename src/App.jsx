@@ -1,12 +1,10 @@
 import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
-import CarPreloader from "./components/CarPreloader";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WhatsAppFAB from "./components/WhatsAppFAB";
 import BackToTop from "./components/BackToTop";
 import MobileBottomBar from "./components/MobileBottomBar";
-import ScrollProgressBar from "./components/ScrollProgressBar";
 import Home from "./pages/Home";
 import Parts from "./pages/Parts";
 import GeneralContact from "./pages/GeneralContact";
@@ -24,9 +22,7 @@ function ScrollToTop() {
 export default function App() {
   return (
     <Router>
-      <CarPreloader />
       <ScrollToTop />
-      <ScrollProgressBar />
       <div className="app-layout" style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
         <Header />
         <main style={{ flex: "1 0 auto" }}>

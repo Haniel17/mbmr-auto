@@ -15,8 +15,7 @@ import {
   ShieldCheck, 
   MessageCircle,
   Truck,
-  Zap,
-  Sparkles
+  Zap
 } from "lucide-react";
 import { companyInfo, partsCatalog } from "../data/partsData";
 
@@ -169,7 +168,6 @@ export default function GeneralContact() {
       />
       <div className="section-title-wrapper" style={{ marginBottom: 48 }}>
         <div className="badge badge-primary hero-badge" style={{ marginBottom: 12 }}>
-          <Sparkles size={13} style={{ marginRight: 4, display: "inline" }} />
           North York Parts Depot &amp; GTA Inquiries
         </div>
         <h1 className="section-title" style={{ fontSize: "2.75rem" }}>Request a Parts Quotation</h1>

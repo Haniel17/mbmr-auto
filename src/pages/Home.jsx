@@ -24,7 +24,7 @@ import {
   Truck,
   RotateCcw,
   Search,
-  Sparkles,
+  Sun,
   ExternalLink,
   CircleDot,
   Car,
@@ -119,7 +119,7 @@ export default function Home() {
     {
       id: "headlights-lighting",
       title: "Headlights & Lighting",
-      icon: <Sparkles size={22} />,
+      icon: <Sun size={22} />,
       desc: "DOT/SAE compliant full LED projector headlight assemblies, Bi-Xenon housings, tail light clusters, fog lamps, and light bars.",
       image: "/images/parts-headlights.jpg",
       badge: "DOT / SAE Certified",
@@ -173,8 +173,8 @@ export default function Home() {
         <div className="hero-bg" />
         <div className="container">
           <div className="hero-content animate-slide-up">
-            <div className="badge badge-primary hero-badge">
-              <Sparkles size={13} style={{ marginRight: 4, display: "inline" }} />
+            <div className="hero-eyebrow">
+              <MapPin size={13} style={{ marginRight: 5, display: "inline", verticalAlign: "-1px" }} />
               MBMR Auto &bull; North York, Toronto (GTA)
             </div>
             <h1 className="hero-title">{companyInfo.tagline}</h1>
@@ -182,22 +182,22 @@ export default function Home() {
               {companyInfo.shortDesc}
             </p>
 
-            {/* Vehicle Type & Parts Pills - immediate clarity */}
-            <div className="hero-vehicle-pills">
-              <Link to="/parts" className="hero-vehicle-pill">
-                <Car size={16} />
+            {/* Vehicle Type & Parts Categories - Clean Automotive Quick Links */}
+            <div className="hero-category-strip">
+              <Link to="/parts" className="hero-cat-btn">
+                <Car size={15} />
                 <span>Car Parts</span>
               </Link>
-              <Link to={partsCategoryPath("truck-parts")} className="hero-vehicle-pill">
-                <Truck size={16} />
+              <Link to={partsCategoryPath("truck-parts")} className="hero-cat-btn">
+                <Truck size={15} />
                 <span>Truck Parts</span>
               </Link>
-              <Link to={partsCategoryPath("body-parts")} className="hero-vehicle-pill">
-                <ShieldCheck size={16} />
+              <Link to={partsCategoryPath("body-parts")} className="hero-cat-btn">
+                <ShieldCheck size={15} />
                 <span>Body Parts</span>
               </Link>
-              <Link to="/parts" className="hero-vehicle-pill">
-                <Wrench size={16} />
+              <Link to="/parts" className="hero-cat-btn">
+                <Wrench size={15} />
                 <span>All Makes & Models</span>
               </Link>
             </div>
@@ -349,16 +349,15 @@ export default function Home() {
                   className={`zoom-detail-card ${isVisible ? "revealed" : ""}`}
                   style={{ transitionDelay: `${idx * 140}ms` }}
                 >
-                  {/* Media Zoom Lens Frame */}
+                  {/* Media Frame */}
                   <div className="zoom-media-frame">
                     <img src={cat.image} alt={cat.title} />
                     <span className="service-badge-floating">
                       {cat.badge}
                     </span>
-                    <div className="focus-target-ring">
-                      <span className="focus-pulse-dot" />
-                      <span>Ready Stock</span>
-                    </div>
+                    <span className="stock-tag">
+                      Ready Stock
+                    </span>
                   </div>
 
                   <div className="category-card-content">
@@ -438,7 +437,7 @@ export default function Home() {
           <div className="grid-2" style={{ gap: "32px", alignItems: "center" }}>
             <div
               data-anim-id="depot-card"
-              className={`card-glass zoom-in-init ${
+              className={`depot-info-card zoom-in-init ${
                 depotSection.visibleSet.has("depot-card") ? "revealed" : ""
               }`}
               style={{ padding: "36px" }}
@@ -512,7 +511,7 @@ export default function Home() {
             {/* Google Map of 1275 Finch Ave W */}
             <div
               data-anim-id="map-card"
-              className={`map-card card-glass zoom-in-init ${
+              className={`map-card depot-map-card zoom-in-init ${
                 depotSection.visibleSet.has("map-card") ? "revealed" : ""
               }`}
               style={{ padding: "16px", height: "100%", minHeight: "380px", transitionDelay: "150ms" }}

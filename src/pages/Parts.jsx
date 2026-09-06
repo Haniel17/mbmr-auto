@@ -18,7 +18,6 @@ import {
   ArrowRight, 
   Package, 
   PhoneCall, 
-  Sparkles, 
   FileText 
 } from "lucide-react";
 
@@ -128,7 +127,6 @@ export default function Parts() {
         <div className="container">
           <div className="section-title-wrapper" style={{ marginBottom: "36px" }}>
             <div className="badge badge-primary hero-badge" style={{ marginBottom: "16px" }}>
-              <Sparkles size={13} style={{ marginRight: 4, display: "inline" }} />
               {companyInfo.tagline}
             </div>
             <h1 className="hero-title" style={{ fontSize: "2.75rem", marginBottom: "16px" }}>
@@ -195,10 +193,9 @@ export default function Parts() {
                         {part.badge}
                       </span>
                     )}
-                    <div className="focus-target-ring">
-                      <span className="focus-pulse-dot" />
-                      <span>In Stock</span>
-                    </div>
+                    <span className="stock-tag">
+                      In Stock
+                    </span>
                   </div>
 
                   <div className="service-card-body">

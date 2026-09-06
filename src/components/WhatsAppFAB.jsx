@@ -10,17 +10,8 @@ export default function WhatsAppFAB() {
 
   useEffect(() => {
     // Show after a short delay so it doesn't appear immediately on load
-    const timer = setTimeout(() => setVisible(true), 2000);
+    const timer = setTimeout(() => setVisible(true), 1500);
     return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    // Pulse animation every 8 seconds to attract attention
-    const interval = setInterval(() => {
-      setPulse(true);
-      setTimeout(() => setPulse(false), 1000);
-    }, 8000);
-    return () => clearInterval(interval);
   }, []);
 
   if (!visible) return null;
@@ -30,7 +21,7 @@ export default function WhatsAppFAB() {
       href={`https://wa.me/${phoneNumber}?text=${message}`}
       target="_blank"
       rel="noopener noreferrer"
-      className={`whatsapp-fab ${pulse ? "pulse" : ""}`}
+      className="whatsapp-fab"
       aria-label="Chat on WhatsApp"
       title="Chat with us on WhatsApp"
     >
