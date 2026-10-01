@@ -69,10 +69,15 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 body {
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background-color: var(--bg-main);
   background-image: 
@@ -1126,6 +1131,11 @@ a {
   align-items: center;
   padding-top: var(--header-height);
   overflow: hidden;
+}
+
+.wt-slider-section + .hero {
+  padding-top: 36px;
+  min-height: calc(100vh - 220px);
 }
 
 .hero-bg {
@@ -2829,6 +2839,1351 @@ a {
   max-width: 520px;
   margin: 0;
 }
+
+
+/* ═══════════════════════════════════════════════════
+   WINTER TIRES POPUP AD
+   ═══════════════════════════════════════════════════ */
+
+/* Keyframes */
+@keyframes wp-fade-in  { from { opacity: 0 } to { opacity: 1 } }
+@keyframes wp-fade-out { from { opacity: 1 } to { opacity: 0 } }
+@keyframes wp-scale-in  { from { opacity: 0; transform: scale(0.88) translateY(18px) } to { opacity: 1; transform: scale(1) translateY(0) } }
+@keyframes wp-scale-out { from { opacity: 1; transform: scale(1) translateY(0) } to { opacity: 0; transform: scale(0.9) translateY(12px) } }
+
+/* Animated red sweep around the border */
+@keyframes wp-border-sweep {
+  0%   { background-position: 0% 50% }
+  50%  { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+/* Corner bracket pulse */
+@keyframes wp-corner-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(238,42,42,0) }
+  50%       { opacity: 0.7; box-shadow: 0 0 10px 4px rgba(238,42,42,0.45) }
+}
+
+/* ── Backdrop ── */
+.winter-popup-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  z-index: 999999;
+  background: rgba(5, 7, 13, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: wp-fade-in 0.32s var(--ease) forwards;
+  overflow: hidden;
+}
+.winter-popup-backdrop.closing {
+  animation: wp-fade-out 0.38s var(--ease) forwards;
+}
+
+/* ── Popup shell ── */
+.winter-popup-shell {
+  position: relative;
+  padding: 6px;
+  border-radius: 14px;
+  max-width: min(520px, 92vw);
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  box-shadow:
+    0 0 0 1px rgba(238, 42, 42, 0.35),
+    0 0 45px -4px rgba(238, 42, 42, 0.3),
+    0 32px 70px -10px rgba(0, 0, 0, 0.9);
+  animation: wp-scale-in 0.42s var(--ease-spring) forwards;
+}
+.winter-popup-shell.closing {
+  animation: wp-scale-out 0.38s var(--ease) forwards;
+}
+
+/* ── Animated glow border ── */
+.wp-border-glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    #ee2a2a 0%,
+    #ff6b6b 20%,
+    #0a0d14 35%,
+    #0a0d14 50%,
+    #ee2a2a 65%,
+    #c0392b 80%,
+    #0a0d14 100%
+  );
+  background-size: 300% 300%;
+  animation: wp-border-sweep 3.5s ease infinite;
+  z-index: -1;
+}
+
+/* ── Corner bracket accents ── */
+.wp-corner {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  z-index: 10;
+  animation: wp-corner-pulse 2.8s ease-in-out infinite;
+}
+.wp-corner--tl {
+  top: -1px; left: -1px;
+  border-top: 3px solid #ee2a2a;
+  border-left: 3px solid #ee2a2a;
+  border-top-left-radius: 14px;
+}
+.wp-corner--tr {
+  top: -1px; right: -1px;
+  border-top: 3px solid #ee2a2a;
+  border-right: 3px solid #ee2a2a;
+  border-top-right-radius: 14px;
+  animation-delay: 0.7s;
+}
+.wp-corner--bl {
+  bottom: -1px; left: -1px;
+  border-bottom: 3px solid #ee2a2a;
+  border-left: 3px solid #ee2a2a;
+  border-bottom-left-radius: 14px;
+  animation-delay: 1.4s;
+}
+.wp-corner--br {
+  bottom: -1px; right: -1px;
+  border-bottom: 3px solid #ee2a2a;
+  border-right: 3px solid #ee2a2a;
+  border-bottom-right-radius: 14px;
+  animation-delay: 2.1s;
+}
+
+/* ── Close button ── */
+.winter-popup-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  z-index: 20;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(238, 42, 42, 0.5);
+  background: var(--bg-surface-elevated);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+.winter-popup-close:hover {
+  background: #ee2a2a;
+  color: #fff;
+  border-color: #ee2a2a;
+  transform: scale(1.1) rotate(90deg);
+}
+
+/* ── Ad image ── */
+.winter-popup-img-wrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  background: #000;
+}
+.winter-popup-img {
+  max-width: 100%;
+  max-height: calc(92vh - 90px);
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* ── Footer CTA ── */
+.winter-popup-footer {
+  flex-shrink: 0;
+  display: flex;
+  gap: 10px;
+  padding: 10px 6px 4px;
+}
+.winter-popup-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+.winter-popup-btn:hover {
+  transform: translateY(-2px);
+}
+.winter-popup-btn--primary {
+  background: #ee2a2a;
+  color: #fff;
+  box-shadow: 0 6px 18px -4px rgba(238,42,42,0.45);
+}
+.winter-popup-btn--primary:hover {
+  box-shadow: 0 10px 24px -4px rgba(238,42,42,0.65);
+}
+.winter-popup-btn--secondary {
+  background: rgba(255,255,255,0.06);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+.winter-popup-btn--secondary:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(238,42,42,0.4);
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .winter-popup-shell {
+    max-width: 96vw;
+    max-height: 94vh;
+  }
+  .winter-popup-img {
+    max-height: calc(94vh - 120px);
+  }
+  .winter-popup-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   WINTER TIRES HORIZONTAL SLIDER (BELOW NAVBAR)
+   ═══════════════════════════════════════════════════ */
+
+.wt-slider-section {
+  margin-top: var(--header-height);
+  width: 100%;
+  background: radial-gradient(ellipse 90% 80% at 50% -10%, rgba(238, 42, 42, 0.09) 0%, rgba(14, 18, 28, 0.98) 70%, rgba(10, 13, 20, 1) 100%);
+  border-bottom: 1px solid rgba(238, 42, 42, 0.25);
+  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.65);
+  position: relative;
+  z-index: 20;
+  overflow: hidden;
+  transition: background 0.4s var(--ease), border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.wt-slider-section:hover,
+.wt-slider-section.wt-is-hovered {
+  border-bottom-color: rgba(238, 42, 42, 0.5);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.85), 0 0 24px rgba(238, 42, 42, 0.16);
+}
+
+.wt-slider-container {
+  padding: 0 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ── Thin Bar (Default state: ~42px) ── */
+.wt-slider-thin-bar {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.wt-thin-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1;
+}
+
+.wt-slider-live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ee2a2a;
+  box-shadow: 0 0 10px 2px rgba(238, 42, 42, 0.75);
+  animation: wt-pulse-dot 1.8s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes wt-pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.35); opacity: 0.6; }
+}
+
+.wt-thin-tag {
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #ee2a2a;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.wt-thin-divider {
+  color: rgba(255, 255, 255, 0.18);
+  font-size: 0.75rem;
+  margin: 0 2px;
+  flex-shrink: 0;
+}
+
+.wt-thin-ticker-window {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex: 1;
+  min-width: 0;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.wt-thin-ticker-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  animation: wt-ticker-fade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes wt-ticker-fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.wt-thin-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Controls appear when expanded */
+.wt-expanded-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  transform: scale(0.92);
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.wt-slider-section:hover .wt-expanded-controls,
+.wt-slider-section.wt-is-hovered .wt-expanded-controls {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.wt-slider-dots {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.wt-slider-dot {
+  width: 18px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.18);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0;
+}
+
+.wt-slider-dot.active {
+  width: 28px;
+  background: #ee2a2a;
+  box-shadow: 0 0 8px rgba(238, 42, 42, 0.6);
+}
+
+.wt-slider-arrows {
+  display: flex;
+  gap: 5px;
+}
+
+.wt-slider-arrow {
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wt-slider-arrow:hover {
+  background: #ee2a2a;
+  color: #fff;
+  border-color: #ee2a2a;
+}
+
+/* Direct call button in thin bar */
+.wt-thin-phone-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.76rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: #fff;
+  background: rgba(238, 42, 42, 0.16);
+  border: 1px solid rgba(238, 42, 42, 0.4);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.wt-thin-phone-btn:hover {
+  background: #ee2a2a;
+  border-color: #ee2a2a;
+  transform: translateY(-1px);
+}
+
+/* Hover expand hint pill */
+.wt-thin-expand-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 20px;
+  transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+  white-space: nowrap;
+}
+
+.wt-expand-label-desktop {
+  display: inline;
+}
+
+.wt-expand-label-mobile {
+  display: none;
+}
+
+.wt-slider-section:hover .wt-thin-expand-pill,
+.wt-slider-section.wt-is-hovered .wt-thin-expand-pill {
+  color: var(--text-primary);
+  border-color: rgba(238, 42, 42, 0.4);
+  background: rgba(238, 42, 42, 0.08);
+}
+
+.wt-expand-chevron {
+  transition: transform 0.55s cubic-bezier(0.25, 1, 0.35, 1), color 0.35s ease;
+}
+
+.wt-expand-chevron.expanded,
+.wt-slider-section:hover .wt-expand-chevron,
+.wt-slider-section.wt-is-hovered .wt-expand-chevron {
+  transform: rotate(180deg);
+  color: #ee2a2a;
+}
+
+/* ── Expandable Body (Silky Smooth CSS Grid Height Animation) ── */
+.wt-slider-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.65s cubic-bezier(0.25, 1, 0.35, 1),
+              margin-bottom 0.6s cubic-bezier(0.25, 1, 0.35, 1);
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.wt-slider-section:hover .wt-slider-body,
+.wt-slider-section.wt-is-hovered .wt-slider-body {
+  grid-template-rows: 1fr;
+  margin-bottom: 16px;
+}
+
+.wt-slider-expand-inner {
+  min-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity 0.45s cubic-bezier(0.25, 0.1, 0.25, 1) 0.06s,
+              transform 0.65s cubic-bezier(0.25, 1, 0.35, 1);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.wt-slider-section:hover .wt-slider-expand-inner,
+.wt-slider-section.wt-is-hovered .wt-slider-expand-inner {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Track and slides inside expandable body */
+.wt-slider-track-window {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  border-radius: var(--radius-md);
+}
+
+.wt-slider-track {
+  display: flex;
+  transition: transform 0.65s cubic-bezier(0.25, 1, 0.35, 1);
+  width: 100%;
+  min-width: 0;
+}
+
+.wt-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Slide 0: Main Hero Grid */
+.wt-hero-slide-grid {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 24px;
+  align-items: center;
+  background: rgba(18, 22, 34, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+}
+
+.wt-slide-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wt-brand-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.wt-brand-pill {
+  font-size: 0.68rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.wt-badge-discount {
+  font-size: 0.68rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: rgba(238, 42, 42, 0.18);
+  color: #ff6b6b;
+  border: 1px solid rgba(238, 42, 42, 0.4);
+}
+
+.wt-slide-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.wt-slide-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.wt-slide-perks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.wt-perk-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.wt-perk-icon {
+  color: #ee2a2a;
+}
+
+.wt-slide-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.wt-btn-call {
+  padding: 9px 18px;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wt-btn-flyer {
+  padding: 9px 16px;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Flyer Thumbnail Card with themed red border */
+.wt-flyer-card {
+  position: relative;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.wt-flyer-card:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.wt-flyer-card-inner {
+  position: relative;
+  border-radius: var(--radius-sm);
+  padding: 4px;
+  background: var(--bg-surface-elevated);
+  border: 1px solid rgba(238, 42, 42, 0.4);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5), 0 0 12px rgba(238, 42, 42, 0.25);
+  overflow: hidden;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wt-flyer-thumb {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 3px;
+  display: block;
+}
+
+.wt-flyer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 13, 20, 0.78);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.wt-flyer-card:hover .wt-flyer-overlay {
+  opacity: 1;
+}
+
+/* Corner accents for thumbnail */
+.wt-corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  z-index: 5;
+}
+.wt-corner--tl { top: -1px; left: -1px; border-top: 2px solid #ee2a2a; border-left: 2px solid #ee2a2a; }
+.wt-corner--tr { top: -1px; right: -1px; border-top: 2px solid #ee2a2a; border-right: 2px solid #ee2a2a; }
+.wt-corner--bl { bottom: -1px; left: -1px; border-bottom: 2px solid #ee2a2a; border-left: 2px solid #ee2a2a; }
+.wt-corner--br { bottom: -1px; right: -1px; border-bottom: 2px solid #ee2a2a; border-right: 2px solid #ee2a2a; }
+
+/* Slides 1 & 2: Deals Grid */
+.wt-deals-slide {
+  background: rgba(18, 22, 34, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+}
+
+.wt-deals-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.wt-deals-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.wt-deals-call-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #ee2a2a;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.84rem;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.wt-deals-call-link:hover {
+  text-decoration: underline;
+}
+
+.wt-deals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.wt-deal-card {
+  background: rgba(26, 32, 48, 0.7);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.wt-deal-card:hover {
+  border-color: rgba(238, 42, 42, 0.5);
+  transform: translateY(-2px);
+  background: rgba(30, 38, 58, 0.85);
+}
+
+.wt-deal-brand {
+  font-size: 0.65rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: #ee2a2a;
+  letter-spacing: 0.06em;
+}
+
+.wt-deal-model {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wt-deal-size {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-family: monospace;
+}
+
+.wt-deal-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.wt-deal-qty {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.wt-deal-price {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.wt-deals-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.wt-deals-sheet-btn {
+  background: none;
+  border: none;
+  color: #ee2a2a;
+  font-weight: 600;
+  font-size: 0.76rem;
+  cursor: pointer;
+  padding: 0;
+}
+.wt-deals-sheet-btn:hover {
+  text-decoration: underline;
+}
+
+/* Slide 3: Perks */
+.wt-perks-slide {
+  background: rgba(18, 22, 34, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+}
+
+.wt-perks-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wt-perks-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.wt-perks-desc {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.wt-perks-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 8px 0;
+}
+
+.wt-feature-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(26, 32, 48, 0.6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+
+.wt-feature-icon {
+  color: #ee2a2a;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.wt-feature-name {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.wt-feature-sub {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.wt-perks-cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+/* Lightbox Modal for Full Price Sheet */
+.wt-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  z-index: 9999999;
+  background: rgba(5, 7, 13, 0.86);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: wp-fade-in 0.3s ease forwards;
+}
+
+.wt-modal-shell {
+  position: relative;
+  padding: 6px;
+  border-radius: 14px;
+  max-width: min(540px, 92vw);
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  box-shadow:
+    0 0 0 1px rgba(238, 42, 42, 0.35),
+    0 0 45px -4px rgba(238, 42, 42, 0.35),
+    0 32px 70px -10px rgba(0, 0, 0, 0.9);
+  animation: wp-scale-in 0.35s var(--ease-spring) forwards;
+}
+
+.wt-modal-img-wrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.wt-modal-img {
+  max-width: 100%;
+  max-height: calc(92vh - 90px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+}
+
+.wt-modal-footer {
+  flex-shrink: 0;
+  display: flex;
+  gap: 10px;
+  padding: 10px 6px 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .wt-deals-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .wt-perks-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .wt-feature-box {
+    padding: 10px;
+  }
+  .wt-feature-name {
+    font-size: 0.8rem;
+  }
+  .wt-feature-sub {
+    font-size: 0.7rem;
+  }
+  .wt-hero-slide-grid {
+    grid-template-columns: 1fr 180px;
+  }
+}
+
+@media (max-width: 680px) {
+  .wt-slider-section {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+  .wt-slider-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .wt-thin-ticker-window,
+  .wt-thin-divider,
+  .wt-thin-phone-btn,
+  .wt-slider-dots,
+  .wt-expand-label-desktop {
+    display: none;
+  }
+  .wt-expand-label-mobile {
+    display: inline;
+  }
+  .wt-slider-thin-bar {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: 38px;
+    gap: 8px;
+  }
+  .wt-thin-tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+  }
+  .wt-thin-right {
+    gap: 6px;
+  }
+  .wt-slider-arrows {
+    gap: 4px;
+  }
+  .wt-slider-arrow {
+    width: 24px;
+    height: 24px;
+  }
+  .wt-thin-expand-pill {
+    padding: 3px 8px;
+    font-size: 0.72rem;
+  }
+  .wt-slider-body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .wt-slider-section:hover .wt-slider-body,
+  .wt-slider-section.wt-is-hovered .wt-slider-body {
+    grid-template-rows: 1fr;
+    margin-bottom: 8px;
+  }
+  .wt-slider-expand-inner {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .wt-slider-track-window {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .wt-slider-track {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: stretch;
+  }
+  .wt-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Slide 0: Hero Slide Mobile Compact */
+  .wt-hero-slide-grid {
+    grid-template-columns: 100%;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 10px 12px;
+    gap: 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .wt-slide-info {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .wt-flyer-card {
+    display: none;
+  }
+  .wt-brand-badges {
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .wt-brand-pill {
+    font-size: 0.58rem;
+    padding: 2px 5px;
+  }
+  .wt-badge-discount {
+    font-size: 0.58rem;
+    padding: 2px 5px;
+  }
+  .wt-slide-title {
+    font-size: 1.05rem;
+    line-height: 1.2;
+    margin: 0;
+  }
+  .wt-slide-desc {
+    font-size: 0.74rem;
+    line-height: 1.35;
+    margin: 0;
+  }
+  .wt-slide-perks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    font-size: 0.68rem;
+    align-items: center;
+  }
+  .wt-slide-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    gap: 6px;
+    margin-top: 2px;
+  }
+  .wt-btn-call, .wt-btn-flyer {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px 10px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  /* Slides 1 & 2: Deals Slide Mobile Compact (2-Column Grid) */
+  .wt-deals-slide {
+    padding: 10px 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .wt-deals-header {
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+  }
+  .wt-deals-title {
+    font-size: 0.85rem;
+    line-height: 1.2;
+    margin: 0;
+  }
+  .wt-deals-call-link {
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
+  .wt-deals-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    width: 100%;
+    min-width: 0;
+  }
+  .wt-deal-card {
+    padding: 6px 8px;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 2px;
+  }
+  .wt-deal-brand {
+    font-size: 0.58rem;
+    letter-spacing: 0.04em;
+  }
+  .wt-deal-model {
+    font-size: 0.7rem;
+    line-height: 1.15;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .wt-deal-size {
+    font-size: 0.62rem;
+    color: var(--text-muted);
+  }
+  .wt-deal-meta {
+    margin-top: 3px;
+    padding-top: 3px;
+  }
+  .wt-deal-qty {
+    font-size: 0.6rem;
+  }
+  .wt-deal-price {
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+  .wt-deals-footer {
+    margin-top: 6px;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    font-size: 0.62rem;
+  }
+  .wt-deals-sheet-btn {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+    white-space: nowrap;
+  }
+
+  /* Slide 3: Perks Mobile Compact */
+  .wt-perks-slide {
+    padding: 10px 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .wt-perks-content {
+    gap: 5px;
+  }
+  .wt-perks-title {
+    font-size: 0.92rem;
+    line-height: 1.2;
+    margin: 0;
+  }
+  .wt-perks-desc {
+    font-size: 0.72rem;
+    line-height: 1.35;
+    margin: 0;
+  }
+  .wt-perks-cards {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    margin: 4px 0;
+  }
+  .wt-feature-box {
+    padding: 6px 8px;
+    gap: 8px;
+    align-items: center;
+  }
+  .wt-feature-icon {
+    font-size: 0.75rem;
+    margin-top: 0;
+  }
+  .wt-feature-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+  .wt-feature-name {
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .wt-feature-sub {
+    display: none;
+  }
+  .wt-perks-cta {
+    margin-top: 4px;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .wt-perks-cta .btn {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 0.76rem;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  /* Eliminate dead space under slider */
+  .wt-slider-section + .hero {
+    padding-top: 10px;
+  }
+
+  /* Popup Ad Mobile Polish */
+  .winter-popup-backdrop {
+    padding: 12px;
+  }
+  .winter-popup-shell {
+    max-width: 100%;
+    width: 100%;
+    max-height: 90vh;
+    padding: 4px;
+  }
+  .winter-popup-close {
+    top: 4px;
+    right: 4px;
+    width: 30px;
+    height: 30px;
+  }
+  .winter-popup-img {
+    max-height: calc(90vh - 100px);
+    width: 100%;
+    object-fit: contain;
+  }
+  .winter-popup-footer {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 4px 4px;
+  }
+  .winter-popup-btn {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 0.84rem;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
 
 
 

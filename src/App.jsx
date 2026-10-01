@@ -9,6 +9,8 @@ import Home from "./pages/Home";
 import Parts from "./pages/Parts";
 import GeneralContact from "./pages/GeneralContact";
 import NotFound from "./pages/NotFound";
+import WinterTiresPopup from "./components/WinterTiresPopup";
+import CarPreloader from "./components/CarPreloader";
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -22,7 +24,9 @@ function ScrollToTop() {
 export default function App() {
   return (
     <Router>
+      <CarPreloader />
       <ScrollToTop />
+      <WinterTiresPopup />
       <div className="app-layout" style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
         <Header />
         <main style={{ flex: "1 0 auto" }}>

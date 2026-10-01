@@ -4,6 +4,7 @@ import { companyInfo } from "../data/partsData";
 import { useScrollAnimation, useScrollParallax } from "../hooks/useScrollAnimation";
 import GoogleReviewsShowcase from "../components/GoogleReviewsShowcase";
 import SEO from "../components/SEO";
+import WinterTiresSlider from "../components/WinterTiresSlider";
 import { pageSeo, partsCategoryPath } from "../seo/siteConfig";
 import { localBusinessSchema } from "../seo/structuredData";
 import { 
@@ -159,6 +160,9 @@ export default function Home() {
         path={pageSeo.home.path}
         jsonLd={localBusinessSchema()}
       />
+      {/* Winter Tires Horizontal Slider right below navbar red line */}
+      <WinterTiresSlider />
+
       {/* Hero with dynamic parallax depth and zoom */}
       <section className="hero">
         <img
